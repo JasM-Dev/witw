@@ -11,12 +11,9 @@ function CountryDetails({ country, borders }) {
 	const router = useRouter();
 	const borderNames =
 		borders === [] ? [] : borders.map(border => border.name.common);
-	const countryLanguages = Object.values(country.languages).join(','); //creates string from array of languages
-	const countryCurrencies = Object.values(country['currencies']); // creates array of currencies
-	const currencyList = countryCurrencies
-		.map(currency => currency.name)
-		.join(',');
-	//creates sting from array of currencies
+	const countryLanguages = country.hasOwnProperty('languages') ? Object.values(country.languages).join(' ,') : 'N/A'; //creates string from array of languages
+	const countryCurrencies = country.hasOwnProperty('currencies') ? Object.values(country['currencies']) : 'N/A'; // creates array of currencies
+
 
 	return (
 		<>
@@ -48,48 +45,50 @@ function CountryDetails({ country, borders }) {
 							<li>
 								<span className='fact'>Native Name:</span>
 								<span className='fact_stat'>
-									{Object.values(country.name.nativeName)[0].common}
+									{country.name.hasOwnProperty('nativeName') ?  Object.values(country.name.nativeName)[0].common : 'N/A'}
 								</span>
 							</li>
 
 							<li>
 								<span className='fact'>Population:</span>
 								<span className='fact_stat'>
-									{country.population.toLocaleString('en-US')}
+									{country.hasOwnProperty('population') ?country.population.toLocaleString('en-US') : 0}
 								</span>
 							</li>
 							<li>
 								<span className='fact'>Region:</span>
-								<span className='fact_stat'>{country.region}</span>
+								<span className='fact_stat'>{country.hasOwnProperty('region') ? country.region : 'N/A'}</span>
 							</li>
 
 							<li>
 								<span className='fact'>Sub Region:</span>
-								<span className='fact_stat'>{country.subregion}</span>
+								<span className='fact_stat'>{country.hasOwnProperty('subregion') ? country.subregion : 'N/A'}</span>
 							</li>
 
 							<li>
 								<span className='fact'>Capital:</span>
-								<span className='fact_stat'>{country.capital}</span>
+								<span className='fact_stat'>{country.hasOwnProperty('capital') ? country.capital : 'N/A'}</span>
 							</li>
 						</div>
 
 						<div className='facts_container_2'>
 							<li>
 								<span className='fact'>Top Level Domain:</span>
-								<span className='fact_stat'>{country.tld}</span>
+								<span className='fact_stat'>{country.hasOwnProperty('tld') ? country.tld[0] : 'N/A'}</span>
 							</li>
 
 							<li>
 								<span className='fact'>
 									{countryCurrencies > 1 ? 'Currencies' : 'Currency'}:
 								</span>
-								<span className='fact_stat'>{currencyList}</span>
+								<span className='fact_stat'>{countryCurrencies === 'N/A' ? 'N/A' : countryCurrencies.map(currency => currency.name).join(',') }</span>
 							</li>
 
 							<li>
 								<span className='fact'>Languages:</span>
-								<span className='fact_stat'>{countryLanguages}</span>
+								<span className='fact_stat'>
+								{countryLanguages}
+								</span>
 							</li>
 						</div>
 					</ul>
