@@ -13,7 +13,7 @@ function CountryDetails({ country, borders }) {
 		borders === [] ? [] : borders.map(border => border.name.common);
 	const countryLanguages = country.hasOwnProperty('languages') ? Object.values(country.languages).join(' ,') : 'N/A'; //creates string from array of languages
 	const countryCurrencies = country.hasOwnProperty('currencies') ? Object.values(country['currencies']) : 'N/A'; // creates array of currencies
-	console.log(country.name.common)
+
 
 	return (
 		<>
