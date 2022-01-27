@@ -3,7 +3,7 @@ import StyledIndexPage from '../components/styled/Index.styled';
 import FilterForm from '../components/FilterForm';
 import Header from '../components/Header';
 import { useContext, useState } from 'react';
-import CountryCard from '../components/CountryCArd';
+import CountryCard from '../components/CountryCard';
 
 export default function Home({ countryData }) {
 	const { theme } = useContext(ThemeContext);
