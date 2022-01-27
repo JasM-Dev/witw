@@ -50,7 +50,7 @@ export default function Home({ countryData }) {
 			</div>
 			<ul className='countries_ul'>
 				{sortedFilteredContries.map(country => (
-					<CountryCard key={country.name.common} country={country} />
+					<CountryCard key={country.name.official} country={country} />
 				))}
 			</ul>
 			{filteredCountries.length === 0 && (

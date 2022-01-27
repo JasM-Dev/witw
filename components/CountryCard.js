@@ -7,6 +7,7 @@ import Link from 'next/link';
 const CountryCard = ({ country }) => {
 	const { theme } = useContext(ThemeContext);
 	
+	
 	return (
 		<Link passHref href={`/details/${country.name.common}` }>
 		<StyledCountryCard dark={theme}>

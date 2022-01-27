@@ -13,7 +13,7 @@ function CountryDetails({ country, borders }) {
 		borders === [] ? [] : borders.map(border => border.name.common);
 	const countryLanguages = country.hasOwnProperty('languages') ? Object.values(country.languages).join(' ,') : 'N/A'; //creates string from array of languages
 	const countryCurrencies = country.hasOwnProperty('currencies') ? Object.values(country['currencies']) : 'N/A'; // creates array of currencies
-
+	console.log(country.name.common)
 
 	return (
 		<>
@@ -129,7 +129,8 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async context => {
 	const id = context.params.id;
-	const res = await fetch(`https://restcountries.com/v3.1/name/${id}`);
+	const encodedId = encodeURIComponent(id)
+	const res = await fetch(`https://restcountries.com/v3.1/name/${encodedId}`);
 	const countryData = await res.json();
 	let bordersData = [];
 	if (countryData[0].hasOwnProperty('borders')) {
