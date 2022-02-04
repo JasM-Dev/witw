@@ -1,34 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Table of contents
 
-## Getting Started
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  
+ 
+## Overview
 
-First, run the development server:
+### The challenge
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Users should be able to:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- See all countries from the API on the homepage
+- Search for a country using an `input` field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page
+- Toggle the color scheme between light and dark mode 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Screenshot
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+![Where in the World app ](./public/project-screenshot.png)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Links
 
-## Learn More
+- Live Site URL: [https://witw-two.vercel.app/](https://witw-two.vercel.app/)
 
-To learn more about Next.js, take a look at the following resources:
+## My process
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Built with
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+- [Next.js](https://reactjs.org/) - JS library
+- REST Countries API
+- Axios
+- [Styled Components](https://styled-components.com/) - For styles
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- LinkedIn - [Jasmine Collins](https://www.linkedin.com/in/jmc414/)
+- Frontend Mentor - [@jmcollins414](https://www.frontendmentor.io/profile/jmcollins414)
+
+
