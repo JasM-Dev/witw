@@ -45,6 +45,6 @@ Users should be able to:
 ## Author
 
 - LinkedIn - [Jasmine Collins](https://www.linkedin.com/in/jmc414/)
-- Frontend Mentor - [@jmcollins414](https://www.frontendmentor.io/profile/jmcollins414)
+
 
 
